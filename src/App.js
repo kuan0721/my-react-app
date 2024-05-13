@@ -5,8 +5,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello React! 2024.5.9</h1>
-        <h2>React第二個元件</h2>
+        <h1>管浩任</h1>
+        <h2>5b0g0019</h2>
         <MyRGBPanel />
       </header>
     </div>
