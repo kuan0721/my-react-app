@@ -63,7 +63,6 @@ body {
 /* 按鈕樣式 */
 button {
   background-color: #667eea; /* 按鈕背景色 */
-  color: white; /* 按鈕字體顏色 */
   border: none; /* 去掉邊框 */
   border-radius: 5px; /* 圓角 */
   padding: 10px 20px; /* 內距 */
