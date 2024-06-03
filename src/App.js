@@ -7,14 +7,27 @@ import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 function App() {
   return (
     <div className="App">
-      <h1>MySlider</h1>
-      <MySlider />
-      <h1>MyRGBPanel</h1>
-      <MyRGBPanel />
-      <h1>MyCalculator</h1>
-      <MyCalculator />
-      <h1>Tic-Tac-Toe Game</h1>
-      <TicTacToe />
+      <header className="App-header">
+        <h1>My Application</h1>
+      </header>
+      <div className="App-grid">
+        <div className="App-grid-item">
+          <h2>MySlider</h2>
+          <MySlider />
+        </div>
+        <div className="App-grid-item">
+          <h2>MyRGBPanel</h2>
+          <MyRGBPanel />
+        </div>
+        <div className="App-grid-item">
+          <h2>MyCalculator</h2>
+          <MyCalculator />
+        </div>
+        <div className="App-grid-item">
+          <h2>Tic-Tac-Toe Game</h2>
+          <TicTacToe />
+        </div>
+      </div>
     </div>
   );
 }

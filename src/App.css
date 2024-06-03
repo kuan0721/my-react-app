@@ -1,94 +1,69 @@
-/* App Component 基本樣式 */
+/* 全局樣式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6; /* 背景色為淡灰色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 最小高度為視窗高度的 100% */
+}
+
 .App {
   text-align: center;
-  background-color: #fdfdfd; /* 背景色為淡灰白色 */
-  min-height: 100vh; /* 最小高度為視窗高度的 100% */
-  display: flex; /* 使用 Flexbox 布局 */
-  flex-direction: column; /* 子元素垂直排列 */
-  align-items: center; /* 子元素水平居中 */
-  justify-content: center; /* 子元素垂直居中 */
-  font-family: 'Arial', sans-serif; /* 字體 */
-}
-
-/* App 標誌樣式 */
-.App-logo {
-  height: 40vmin; /* 高度為視窗最小邊長的 40% */
-  pointer-events: none; /* 禁止指針事件，避免干擾點擊 */
-  margin-bottom: 20px; /* 下方外距 */
-  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2)); /* 添加陰影效果 */
-}
-
-/* 媒體查詢：當用戶沒有設置減少動畫時，添加旋轉動畫 */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear; /* 無限旋轉動畫，20秒一圈，線性動畫 */
-  }
-}
-
-/* App 頁頭樣式 */
-.App-header {
-  background-color: #4c4cff; /* 背景色為較深的藍色 */
-  min-height: 50vh; /* 最小高度為視窗高度的 50% */
-  display: flex; /* 使用 Flexbox 布局 */
-  flex-direction: column; /* 子元素垂直排列 */
-  align-items: center; /* 子元素水平居中 */
-  justify-content: center; /* 子元素垂直居中 */
-  font-size: calc(10px + 2vmin); /* 字體大小根據視窗大小調整 */
-  color: white; /* 字體顏色為白色 */
-  border-radius: 15px; /* 圓角 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
-  padding: 20px; /* 內距 */
-}
-
-/* App 連結樣式 */
-.App-link {
-  color: #61dafb; /* 顏色為藍綠色 */
-  text-decoration: none; /* 去掉下劃線 */
-  font-weight: bold; /* 字體加粗 */
-  transition: color 0.3s ease; /* 添加顏色變化過渡效果 */
-}
-
-.App-link:hover {
-  color: #21a1f1; /* 懸停時顏色變化 */
-}
-
-/* 定義 App-logo 旋轉動畫 */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); /* 從 0 度開始 */
-  }
-  to {
-    transform: rotate(360deg); /* 旋轉到 360 度 */
-  }
-}
-
-/* 額外樣式 */
-.container {
-  background-color: white; /* 背景色為白色 */
-  border-radius: 15px; /* 圓角 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
-  padding: 20px; /* 內距 */
+  background-color: #ffffff; /* 背景色為白色 */
+  border-radius: 10px; /* 圓角 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+  overflow: hidden; /* 隱藏溢出內容 */
+  width: 90%;
+  max-width: 1200px; /* 最大寬度 */
   margin: 20px; /* 外距 */
-  width: 80%; /* 寬度 */
-  max-width: 800px; /* 最大寬度 */
 }
 
-.title {
-  font-size: 2rem; /* 標題字體大小 */
-  margin-bottom: 20px; /* 下方外距 */
+.App-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 漸變背景 */
+  padding: 20px; /* 內距 */
+  color: white; /* 字體顏色為白色 */
+  border-top-left-radius: 10px; /* 圓角 */
+  border-top-right-radius: 10px; /* 圓角 */
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center; /* 標題置中 */
+}
+
+.App-grid {
+  display: grid; /* 使用網格佈局 */
+  grid-template-columns: repeat(2, 1fr); /* 每行兩列 */
+  grid-gap: 20px; /* 網格間距 */
+  padding: 20px;
+}
+
+.App-grid-item {
+  background-color: #ffffff; /* 背景色為白色 */
+  border-radius: 10px; /* 圓角 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+  padding: 20px; /* 內距 */
+  text-align: center; /* 左對齊文本 */
+}
+
+.App-grid-item h2 {
+  font-size: 1.5rem; /* 標題字體大小 */
   color: #333; /* 字體顏色 */
-}
-
-.text {
-  font-size: 1rem; /* 文字字體大小 */
-  line-height: 1.6; /* 行高 */
-  color: #666; /* 字體顏色 */
   margin-bottom: 20px; /* 下方外距 */
 }
 
-.button {
-  background-color: #4c4cff; /* 背景色 */
-  color: white; /* 字體顏色 */
+/* 按鈕樣式 */
+button {
+  background-color: #667eea; /* 按鈕背景色 */
+  color: white; /* 按鈕字體顏色 */
   border: none; /* 去掉邊框 */
   border-radius: 5px; /* 圓角 */
   padding: 10px 20px; /* 內距 */
@@ -97,11 +72,12 @@
   transition: background-color 0.3s ease; /* 添加背景色變化過渡效果 */
 }
 
-.button:hover {
-  background-color: #3a3acc; /* 懸停時背景色變化 */
+button:hover {
+  background-color: #4a63d0; /* 懸停時背景色變化 */
 }
 
-.input {
+/* 輸入框樣式 */
+input {
   border: 1px solid #ccc; /* 邊框 */
   border-radius: 5px; /* 圓角 */
   padding: 10px; /* 內距 */
@@ -110,4 +86,3 @@
   box-sizing: border-box; /* 包括內距和邊框 */
   margin-bottom: 20px; /* 下方外距 */
 }
-
